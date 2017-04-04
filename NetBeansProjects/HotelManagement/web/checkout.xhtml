@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Hotel Management</title>
+    </h:head>
+    <h:body style="background-image: url(picture/1.jpg)">
+        <h:outputStylesheet name="css/bbotstrap.css"/>
+        <h:outputStylesheet name="css/style.css"/>
+      
+             Welcome to Hotel Management 
+        
+             <ul class="header" >
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Registration</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Available Rooms</a></li>
+                </ul> 
+             <h:form>
+             
+                        <p><span style="font-weight: bold">Start Date : </span><span>Date</span></p>
+                        <p><span  style="font-weight: bold">End   Date : </span><span>Date</span></p>
+                        <p><span style="font-weight: bold">Room Type : </span><span>Room Number</span></p>
+                        <p>
+                            <p style="font-weight: bold">Your Rooms Reservations</p>
+                            <p><h:dataTable styleClass="">
+
+                                    <h:column> 
+                                        <f:facet name="headet"> Room No </f:facet>
+                                                </h:column>
+                                        
+                                   
+
+                                    <h:column >
+                                        <f:facet name="headet"> Description </f:facet>
+                                      
+                                    </h:column>
+
+                                                   <h:column >
+
+                                      <f:facet name="headet"> Picture </f:facet>
+                                    </h:column>
+
+                                    <h:column >
+                                        <f:facet name="headet"> Select </f:facet>
+                                    </h:column>
+                                    
+                                </h:dataTable>
+<!--                                <h:columnGroup type="footer">
+
+                                    <h:row>
+                                        <h:column colspan="3" style="text-align: right" footerText="Totals"/>
+                                        <h:column footerText="$100000"/>
+                                    </h:row>
+                                </h:columnGroup-->
+                            </p>
+
+                        </p>
+                        <!--                        <p><span>Total Amount :</span><span>$100000</span></p>-->
+
+                        <p class=" "><span>Promotional Code :</span>
+                            <span><h:inputText/></span>
+                        </p> 
+
+
+                        <table>
+                            <tr>
+
+                                <td style="padding-left: 178px;font-weight: bold">Payment Method :</td>
+
+                                <td><h:selectOneRadio label="Payment Method :">
+                                        <f:selectItem itemLabel="Visa" itemValue="VS" />
+                                        <f:selectItem itemLabel="American Express" itemValue="AMEX" />
+                                    </h:selectOneRadio></td>
+                            </tr>
+                        </table>
+
+                        <p ><span>Credit Card Number :</span>
+                            <span><h:inputText/></span>
+                        </p> 
+                        <p ><span>Expiry Date :</span>
+                            <span><h:inputText/></span>
+                        </p> 
+                        <h:commandButton value="Confirm Reservation"  style="margin-toh:10px;width: 150px;font-size: 12px "/>
+                               </h:form>
+ 
+    </h:body>
+</html>
+

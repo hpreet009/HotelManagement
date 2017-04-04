@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title> Hotel Management </title>
+    </h:head>
+    <h:body style="background-image: url(picture/1.jpg)">
+    <h:outputStylesheet name="css/bbotstrap.css"/>
+        <h:outputStylesheet name="css/style.css"/>
+        Welcome to Hotel Management 
+
+        <ul class="header" >
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Registration</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Available Rooms</a></li>
+        </ul>
+        <h:form>
+            <h3>Registration</h3>
+            <h:panelGrid columns="2">
+                <label>First Name
+                    <h:inputText class="form-control" value="#{registration.register.firstName}"/></label><br/>
+                <label>Last Name
+                    <h:inputText class="form-control" value="#{registration.register.lastName}"/></label><br/>
+                <label>Email Address
+                    <h:inputText class="form-control" value="#{registration.register.emailAddress}"/></label><br/>    
+                <label>Age
+                    <h:inputText class="form-control" value="#{registration.register.age}"/></label><br/>    
+                <label>Contact Number
+                    <h:inputText class="form-control" value="#{registration.register.contactNumber}"/></label><br/>
+                <label>Home Address
+                    <h:inputTextarea cols="30" rows="3" class="form-control" value="#{registration.register.homeAddress}"/></label><br/>    
+                <label>Zip
+                    <h:inputText class="form-control" value="#{registration.register.zip}"/></label><br/>    
+                <label>State
+                    <h:inputText class="form-control" value="#{registration.register.state}"/></label><br/>
+            </h:panelGrid>    
+
+            <h:commandButton value="Submit" class="" action="#{registration.save}" /> &nbsp; &nbsp; &nbsp;
+            <h:commandButton value="Reset" class=""/>
+
+              
+        </h:form>
+    </h:body>
+</html>
+
