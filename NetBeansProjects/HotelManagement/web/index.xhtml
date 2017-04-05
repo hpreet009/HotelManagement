@@ -10,24 +10,23 @@
     <h:body style="background-image: url(picture/1.jpg)">
         <h:outputStylesheet name="css/bootstrap.css"/>
         <h:outputStylesheet name="css/style.css"/>
-      
-        <h1 style="background-color: #009999"> Welcome to Our Hotel </h1>
-        
-            
-                    <a href="#">Home</a> &nbsp; &nbsp;
-                    <a href="#">Registration</a> &nbsp; &nbsp;
-                    <a href="#">Login</a> &nbsp; &nbsp;
-                    <a href="#">Available Rooms</a> &nbsp; &nbsp;
-                
-             
-                <h:form>
-            <p>Username: <h:inputText value="#{login.username}" /></p>
-            <p>Password: <h:inputSecret value="#{login.password}" /></p>
-            <p><h:commandLink action="#{Users.doLogin(users.)}" value="Login"/></p>            
-          
-            
-        </h:form>
 
+        <h:panelGroup style="display: block; text-align: center; border:1">
+            <h:form style="background-image: url(picture/2.jpg)">
+
+        <h1 style="background-color: #009999"> Welcome to Our Hotel </h1>
+
+
+        <a href="#">Home</a> &nbsp; &nbsp;
+        <a href="#">Registration</a> &nbsp; &nbsp;
+        <a href="#">Login</a> &nbsp; &nbsp;
+        <a href="#">Available Rooms</a> &nbsp; &nbsp;
+
+            <p>Username: <h:inputText value="#{login.name}" /></p>
+            <p>Password: <h:inputSecret value="#{login.password}" /></p>
+            <p><h:commandButton value="Submit" class="" action="#{login.go()}" /> &nbsp; &nbsp; &nbsp;</p>
+        </h:form>
+        </h:panelGroup>
     </h:body>
 </html>
 

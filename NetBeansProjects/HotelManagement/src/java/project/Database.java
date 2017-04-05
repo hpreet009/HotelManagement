@@ -15,22 +15,28 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author c0687969
+ * @author c0688638
  */
 public class Database {
-     public static Connection getConnection() throws SQLException {
+     private final static String studentNumber = "c0688638";
+
+    /**
+     * Utility method used to create a Database Connection
+     *
+     * @return the Connection object
+     * @throws SQLException
+     */
+    public static Connection getConnection() throws SQLException {
         try {
-            
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
         }
         String server = "ipro.lambton.on.ca";
-        String username =  "";
-        String password = "";
+        String username = studentNumber + "-java";
+        String password = studentNumber;
         String database = username;
-        String jdbc = String.format("jdbc:derby://localhost:1527/HotelManagement [ on APP]", server, database);
+        String jdbc = String.format("jdbc:mysql://%s/%s", server, database);
         return DriverManager.getConnection(jdbc, username, password);
     }
-    
 }

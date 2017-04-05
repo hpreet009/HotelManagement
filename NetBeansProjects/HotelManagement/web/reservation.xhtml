@@ -2,64 +2,65 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      
-     
+
+
       xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Hotel Management</title>
     </h:head>
-    
-    
-    <h:outputStylesheet name="css/bbotstrap.css"/>
+    <h:body style="background-image: url(picture/1.jpg)">
+        <h:outputStylesheet name="css/bootstrap.css"/>
         <h:outputStylesheet name="css/style.css"/>
-        Welcome to Hotel Management 
 
-        <ul class="" >
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Registration</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Available Rooms</a></li>
-        </ul>
-       
-                        Start Date :
-                               
-                            <calendar id="startDate"  showOn="button" />
-                        <br/>
-                        <label class="">End Date :
-                            <calendar id="endDate"  showOn="button" />
-                        </label><br/>
+        <h:panelGroup style="display: block; text-align: center; border:1">
+            <h:form style="background-image: url(picture/2.jpg)">
 
-                        <label class="">Room Type :
-                            <h:selectOneMenu>
-S                                <f:selectItem itemLabel="Luxuary" itemValue="luxuary" />
-                                <f:selectItem itemLabel="Ordinary" itemValue="ordinary" />
-                            </h:selectOneMenu>
-                        </label><br/>
+                <h1 style="background-color: #009999"> Welcome to Our Hotel </h1>
 
-                        <h:dataTable styleClass="">
-                                       
-                            <h:column headerText="Room No">
-                                <h:outputText  />
-                            </h:column>
-                                          
-                            <h:column headerText="Description">
-                                <h:outputText  />
-                            </h:column>
+                <a href="#">Home</a> &nbsp; &nbsp;
+                <a href="#">Registration</a> &nbsp; &nbsp;
+                <a href="#">Login</a> &nbsp; &nbsp;
+                <a href="#">Available Rooms</a> &nbsp; &nbsp;
 
-                            <h:column headerText="Picture">
-                                <h:outputText  />
-                            </h:column>
+                <label>Start Date :
+                    <calendar id="startDate"  showOn="button" />
+                </label><br/>
+                <label class="label_end_date">End Date :
+                    <calendar id="endDate"  showOn="button" />
+                </label><br/>
 
-                            <h:column headerText="Select">
-                                <h:outputText  />
-                            </h:column>
-                        </h:dataTable>
-                        <br/>
+                <label class="label_room_type">Room Type :
+                    <h:selectOneMenu>
+                        <f:selectItem itemLabel="Luxuary" itemValue="luxuary" />
+                        <f:selectItem itemLabel="Ordinary" itemValue="ordinary" />
+                    </h:selectOneMenu>
+                </label><br/>
 
-                        <h:commandButton value="Procedd To CheckOut" class=""/>
-                   
-    
-    
+                <h:dataTable styleClass="room_list_data_table">
+
+                    <h:column>
+                        <f:facet name="header">Room No</f:facet>
+                        <h:outputText  />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Description</f:facet>
+                        <h:outputText  />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Picture</f:facet>
+                        <h:outputText  />
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Select</f:facet>
+                        <h:outputText  />
+                    </h:column>
+                </h:dataTable>
+                <br/>
+
+                <h:commandButton value="Procedd To CheckOut" class="btn btn-info btn-lg procedd_checkout_btn"/>
+            </h:form>
+        </h:panelGroup>
+    </h:body>
 </html>
 

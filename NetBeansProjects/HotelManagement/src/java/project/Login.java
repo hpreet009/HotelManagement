@@ -5,46 +5,35 @@
  */
 package project;
 
-import java.io.Serializable;
-import javax.enterprise.context.SessionScoped;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
 
 /**
  *
- * @author c0687969
+ * @author c0688638
  */
 @Named
-@SessionScoped
-public class Login implements Serializable {
+@ApplicationScoped
+public class Login {
 
-    private String username ;
-    private String password ;
-    private boolean loggedIn;
-    private user currentuser;
+    private String name;
+    private String password;
 
-    
-     public Login() {
-        username = null;
-        password = null;
-        loggedIn = false;
-        currentuser = null;
-    }
-    public String getUsername() {
-        return username;
+    public String getName() {
+        return name;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public user getCurrentuser() {
-        return currentuser;
-    }
-
-    public void setCurrentuser(user currentuser) {
-        this.currentuser = currentuser;
-    }
-    
     public String getPassword() {
         return password;
     }
@@ -53,31 +42,18 @@ public class Login implements Serializable {
         this.password = password;
     }
 
-    public boolean isLoggedIn() {
-        return loggedIn;
-    }
-
-    public void setLoggedIn(boolean loggedIn) {
-        this.loggedIn = loggedIn;
-    }
-
-    public String doLogin() {
-        for (user u : Users.getInstance().getUsers()) {
-            if (username.equals(u.getUsername())
-                    && password.equals(u.getPassword())) {
-                loggedIn = true;
-                currentuser = u;
-                return "reservation";
-            }
-                
-            }
-        currentuser = null;
-        loggedIn = false;
-        return "index";
-    }
-}
-
+    public String go() throws SQLException {
         
+            Connection conn = Database.getConnection();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM registration");
+            while (rs.next()) {
+                if (name.equals(rs.getString("Name")) && password.equals(rs.getString("Password"))) {
+                    return "reservation";
+                }
+            
+        } 
+        return "registration";
+    }
 
-
-
+}

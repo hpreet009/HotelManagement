@@ -6,42 +6,44 @@
         <title> Hotel Management </title>
     </h:head>
     <h:body style="background-image: url(picture/1.jpg)">
-    <h:outputStylesheet name="css/bbotstrap.css"/>
+        <h:outputStylesheet name="css/bootstrap.css"/>
         <h:outputStylesheet name="css/style.css"/>
-        Welcome to Hotel Management 
 
-        <ul class="header" >
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Registration</a></li>
-            <li><a href="#">Login</a></li>
-            <li><a href="#">Available Rooms</a></li>
-        </ul>
-        <h:form>
-            <h3>Registration</h3>
-            <h:panelGrid columns="2">
-                <label>First Name
-                    <h:inputText class="form-control" value="#{registration.register.firstName}"/></label><br/>
-                <label>Last Name
-                    <h:inputText class="form-control" value="#{registration.register.lastName}"/></label><br/>
-                <label>Email Address
-                    <h:inputText class="form-control" value="#{registration.register.emailAddress}"/></label><br/>    
-                <label>Age
-                    <h:inputText class="form-control" value="#{registration.register.age}"/></label><br/>    
-                <label>Contact Number
-                    <h:inputText class="form-control" value="#{registration.register.contactNumber}"/></label><br/>
-                <label>Home Address
-                    <h:inputTextarea cols="30" rows="3" class="form-control" value="#{registration.register.homeAddress}"/></label><br/>    
-                <label>Zip
-                    <h:inputText class="form-control" value="#{registration.register.zip}"/></label><br/>    
-                <label>State
-                    <h:inputText class="form-control" value="#{registration.register.state}"/></label><br/>
-            </h:panelGrid>    
+        <h:panelGroup style="display: block; text-align: center; border:1">
+            <h:form style="background-image: url(picture/2.jpg)">
 
-            <h:commandButton value="Submit" class="" action="#{registration.save}" /> &nbsp; &nbsp; &nbsp;
-            <h:commandButton value="Reset" class=""/>
+        <h1 style="background-color: #009999"> Welcome to Our Hotel </h1>
 
-              
+        <a href="#">Home</a> &nbsp; &nbsp;
+        <a href="#">Registration</a> &nbsp; &nbsp;
+        <a href="#">Login</a> &nbsp; &nbsp;
+        <a href="#">Available Rooms</a> &nbsp; &nbsp;
+
+                <h3>Registration</h3>
+                <h:panelGrid  border="1" style="margin-left: 500px ">
+                    <p>User Name
+                        <h:inputText  value="#{registrationController.thisRegistration.name}"/></p>
+                    <p>Password
+                        <h:inputText  value="#{registrationController.thisRegistration.password}"/></p>
+                    <p>Email Address
+                        <h:inputText  value="#{registrationController.thisRegistration.emailAddress}"/></p>   
+                    <p>Age
+                        <h:inputText  value="#{registrationController.thisRegistration.age}"/></p>    
+                    <p>Contact Number
+                        <h:inputText  value="#{registrationController.thisRegistration.contactNumber}"/></p>
+                    <p>Home Address
+                        <h:inputTextarea cols="30" rows="3"  value="#{registrationController.thisRegistration.homeAddress}"/></p>    
+                    <p>Zip
+                        <h:inputText  value="#{registrationController.thisRegistration.zip}"/></p>   
+                    <p>State
+                        <h:inputText  value="#{registrationController.thisRegistration.state}"/></p>
+
+
+                        <h:commandButton value="Submit" class="" action="#{registrationController.add()}" />&nbsp;
+                        <h:commandButton value="Reset" class=""/>
+                </h:panelGrid>  
         </h:form>
+        </h:panelGroup>
     </h:body>
 </html>
 

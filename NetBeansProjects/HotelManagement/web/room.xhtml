@@ -7,70 +7,59 @@
         <title>Hotel Management</title>
     </h:head>
     <h:body style="background-image: url(picture/1.jpg)">
-        <h:outputStylesheet name="css/bbotstrap.css"/>
+        <h:outputStylesheet name="css/bootstrap.css"/>
         <h:outputStylesheet name="css/style.css"/>
-      
-             Welcome to Hotel Management 
-        
-             <ul class="header" >
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Registration</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Available Rooms</a></li>
-                </ul> 
-             
-              <h:form>  
-                        <h3>Room Administration</h3>
-                        <h:panelGrid columns="2">
-                        <label>Room Number
-                            <h:inputText class="" value="#{roomManagement.room.roomNumber}"/></label><br/>    
-                        <label>Type of Room
-                            <h:selectOneListbox value="#{roomManagementBean.room.typeRoom}">
-                                <f:selectItem itemValue="Deluxe" itemLabel="Deluxe" />
-                                <f:selectItem itemValue="Luxury" itemLabel="Luxury" />
-                                <f:selectItem itemValue="Economy" itemLabel="Economy" />
-                            </h:selectOneListbox>
-                        </label><br/>
-                        <label>Description
-                            <h:inputTextarea cols="30" rows="3" class="form-control" value="#{roomManagement.room.description}"/></label><br/>
-                        <label>Price
-                            <h:inputText class="form-control" value="#{roomManagement.room.price}"/></label><br/>    
-                        </h:panelGrid>    
-                        <div class="col-md-6 login_buttons">
-                            <h:commandButton value="Submit"  action="#{roomManagement.save}" />
-                            <h:commandButton value="Edit" />
-                            <h:commandButton value="Delete" />
-                        </div>    
-                    </h:form>
-             
-                    <h:dataTable value="List" var="room"
-    			styleClass="room-table"
-    			headerClass="room-table-header"
-    			rowClasses="room-table-odd-row,room-table-even-row">
- 
-    			<h:column>
-    	
-    				<f:facet name="header">Room Number</f:facet>
-    				room number
-    			</h:column>
- 
-    			<h:column>
-    				<f:facet name="header">Room Type</f:facet>
-    				deluxe
-    			</h:column>
- 
-    			<h:column>
-    				<f:facet name="header">Description</f:facet>
-    				A very relaxing room that has..........
-    			</h:column>
- 
-    			<h:column>
-    				<f:facet name="header">Price</f:facet>
-    				80.00
-    			</h:column>
- 
-    		</h:dataTable>
-             
+
+        <h:panelGroup style="display: block; text-align: center; border:1">
+            <h:form style="background-image: url(picture/2.jpg)">
+
+                <h1 style="background-color: #009999"> Welcome to Our Hotel </h1>
+
+                <a href="#">Home</a> &nbsp; &nbsp;
+                <a href="#">Registration</a> &nbsp; &nbsp;
+                <a href="#">Login</a> &nbsp; &nbsp;
+                <a href="#">Available Rooms</a> &nbsp; &nbsp;
+
+
+                <h3>Room Administration</h3>
+                <!--<h:panelGrid columns="2">-->
+                <p> <label>Room Number
+                        <h:inputText class="" value="#{roomManagement.room.roomNumber}"/></label></p>
+                <p> <label>Type of Room
+                        <h:selectOneListbox value="#{roomManagementBean.room.typeRoom}">
+                            <f:selectItem itemValue="Deluxe" itemLabel="Deluxe" />
+                            <f:selectItem itemValue="Luxury" itemLabel="Luxury" />
+                            <f:selectItem itemValue="Economy" itemLabel="Economy" />
+                        </h:selectOneListbox>
+                    </label></p>
+                <p><label>Description
+                        <h:inputTextarea cols="30" rows="3" class="form-control" value="#{roomManagement.room.description}"/>
+                    </label></p>
+                <p><label>Price
+                        <h:inputText class="form-control" value="#{roomManagement.room.price}"/>
+                    </label></p>  
+                <!--</h:panelGrid>-->    
+
+                <p><h:commandButton value="Submit"  action="#{roomManagement.save}" /></p>
+                <!--<h:commandButton value="Edit" />
+                <h:commandButton value="Delete" />-->
+
+                <h:dataTable>
+                    <h:column>
+                        <f:facet name="header">Room Number</f:facet>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Room Type</f:facet>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Description</f:facet>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Price</f:facet>
+                    </h:column>
+                </h:dataTable>
+            </h:form>
+        </h:panelGroup>
     </h:body>
 </html>
 
