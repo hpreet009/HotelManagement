@@ -51,10 +51,6 @@
                             <div class="w3-half w3-margin-bottom">
                                 <h:commandButton value="Login" action="#{login.go()}" style="width:40%;text-align:left;padding:8px 16px" />
                             </div>
-                            <div class="w3-half">
-                                <h:commandButton value="Register" style="width:40%;text-align:left;padding:8px 16px" />
-
-                            </div>
                         </div>
 
                     </h:form>
@@ -76,9 +72,7 @@
                     <div class="w3-container w3-white">
                         <h:form>
                             <h3>Single Room</h3>
-                            <h6 class="w3-opacity">From $99</h6>
                             <p>Single bed</p>
-                            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
                             <h:commandButton value="Choose Room" action="index.xhtml" style="width:100%;text-align:left;padding:8px 16px;color:#fff!important;background-color:#000!important;margin-bottom:16px!important"/>
                         </h:form>
                     </div>
@@ -88,9 +82,7 @@
                     <div class="w3-container w3-white">
                         <h:form>
                             <h3>Double Room</h3>
-                            <h6 class="w3-opacity">From $149</h6>
                             <p>Queen-size bed</p>
-                            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
                             <h:commandButton value="Choose Room" style="width:100%;text-align:left;padding:8px 16px;color:#fff!important;background-color:#000!important;margin-bottom:16px!important"/>
                         </h:form>
                     </div>
@@ -100,9 +92,7 @@
                     <div class="w3-container w3-white">
                         <h:form>
                             <h3>Deluxe Room</h3>
-                            <h6 class="w3-opacity">From $199</h6>
                             <p>King-size bed</p>
-                            <p class="w3-large"><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
                             <h:commandButton value="Choose Room" style="width:100%;text-align:left;padding:8px 16px;color:#fff!important;background-color:#000!important;margin-bottom:16px!important"/>
                         </h:form>
                     </div>
@@ -119,7 +109,7 @@
                 <p>Email Address:<h:inputText value="#{registrationController.thisRegistration.emailAddress}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
                 <p>Age:<h:inputText value="#{registrationController.thisRegistration.age}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
                 <p>Contact Number:<h:inputText value="#{registrationController.thisRegistration.contactNumber}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
-                <p>Home Address:<h:inputText value="#{registrationController.thisRegistration.contactNumber}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
+                <p>Home Address:<h:inputText value="#{registrationController.thisRegistration.homeAddress}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
                 <p>Zip:<h:inputText value="#{registrationController.thisRegistration.zip}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
                 <p>State:<h:inputText value="#{registrationController.thisRegistration.state}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
 

@@ -76,8 +76,9 @@ public class RegistrationController {
     
     
     
-     public String add() {
+     public void add() {
         try {
+             thisRegistration = new Registration();
             Connection conn = Database.getConnection();
             String sql = "INSERT INTO registration(Name, Password,Email,Age,ContactNumber,HomeAddress,Zip,State) VALUES (?,?,?,?,?,?,?,?)";
             PreparedStatement pstmt = conn.prepareStatement(sql);
@@ -97,7 +98,7 @@ public class RegistrationController {
         } catch (SQLException ex) {
             Logger.getLogger(RegistrationController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return "login";
+        
     }
 
 }

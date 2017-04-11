@@ -8,59 +8,168 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Hotel Management</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+        </style>
     </h:head>
-    <h:body style="background-image: url(picture/1.jpg)">
-        <h:outputStylesheet name="css/bootstrap.css"/>
-        <h:outputStylesheet name="css/style.css"/>
+    <h:body class="w3-light-grey w3-content w3-border-left w3-border-right">
+        <!-- Navigation Bar -->
+        <div class="w3-bar w3-white w3-large"  id="top">
+            <!--<img src="picture/logo.png" height="100" width="100" class="w3-bar-item w3-button w3-mobile"/><i class="w3-margin-right"></i>-->
+            <a href="index.xhtml" class="w3-bar-item w3-button w3-mobile">Rooms</a>
+            <a href="#index.xhtml" class="w3-bar-item w3-button w3-mobile">Register</a>
+        </div>
 
-        <h:panelGroup style="display: block; text-align: center; border:1">
-            <h:form style="background-image: url(picture/2.jpg)">
 
-                <h1 style="background-color: #009999"> Welcome to Our Hotel </h1>
+        <div class="w3-container" >
+            <h2 class="w3-text-green">Single Bedroom</h2>
+            <div class="w3-display-container mySlides">
+                <img src="picture/single1.jpg" style="width:100%;margin-bottom:-6px"/>
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Single Bedroom</p>
+                </div>
+            </div>
 
-                <a href="#">Home</a> &nbsp; &nbsp;
-                <a href="#">Registration</a> &nbsp; &nbsp;
-                <a href="#">Login</a> &nbsp; &nbsp;
-                <a href="#">Available Rooms</a> &nbsp; &nbsp;
+        </div>
 
-                <label>Start Date :
-                    <calendar id="startDate"  showOn="button" />
-                </label><br/>
-                <label class="label_end_date">End Date :
-                    <calendar id="endDate"  showOn="button" />
-                </label><br/>
 
-                <label class="label_room_type">Room Type :
-                    <h:selectOneMenu>
-                        <f:selectItem itemLabel="Luxuary" itemValue="luxuary" />
-                        <f:selectItem itemLabel="Ordinary" itemValue="ordinary" />
-                    </h:selectOneMenu>
-                </label><br/>
+        <div class="w3-container">
+            <h4><strong>The space</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-male"></i> Max people: 1</p>
+                    <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 1</p>
+                    <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+                </div>
 
-                <h:dataTable styleClass="room_list_data_table">
+            </div>
+            <hr></hr>
 
-                    <h:column>
-                        <f:facet name="header">Room No</f:facet>
-                        <h:outputText  />
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">Description</f:facet>
-                        <h:outputText  />
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">Picture</f:facet>
-                        <h:outputText  />
-                    </h:column>
-                    <h:column>
-                        <f:facet name="header">Select</f:facet>
-                        <h:outputText  />
-                    </h:column>
-                </h:dataTable>
-                <br/>
+            <h4><strong>Amenities</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+                    <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+                </div>
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+                    <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+                </div>
+            </div>
+            <hr></hr>
+        </div>
+        <h:form>
+            <div class="w3-row-padding" style="margin:0 50px;">
+                <div class="w3-half w3-margin-bottom">
+                    <h6 class="w3-opacity">Price $99</h6><br/>
+                </div>
+                <div class="w3-half">
+                    <h:commandButton value="Book Now" action="Booking.xhtml" style="width:70%;text-align:left;padding:8px 16px" />
+                </div>
+            </div>
+        </h:form>
+        <div class="w3-container" >
+            <h2 class="w3-text-green">Double Bedroom</h2>
+            <div class="w3-display-container mySlides">
+                <img src="picture/double1.jpg" style="width:100%;margin-bottom:-6px"/>
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Double Bedroom</p>
+                </div>
+            </div>
+        </div>
 
-                <h:commandButton value="Procedd To CheckOut" class="btn btn-info btn-lg procedd_checkout_btn"/>
-            </h:form>
-        </h:panelGroup>
+
+
+        <div class="w3-container">
+            <h4><strong>The space</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-male"></i> Max people: 2</p>
+                    <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 1</p>
+                    <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+                </div>
+
+            </div>
+            <hr></hr>
+
+            <h4><strong>Amenities</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+                    <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+                    <p><i class="fa fa-fw fa-tv"></i> TV</p>
+                </div>
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+                    <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+                </div>
+            </div>
+            <hr></hr>
+        </div>
+        <h:form>
+            <div class="w3-row-padding" style="margin:0 50px;">
+                <div class="w3-half w3-margin-bottom">
+                    <h6 class="w3-opacity">Price $149</h6><br/>
+                </div>
+                <div class="w3-half">
+                    <h:commandButton value="Book Now" action="Booking.xhtml" style="width:70%;text-align:left;padding:8px 16px" />
+                </div>
+            </div>
+        </h:form>
+
+        <div class="w3-container" >
+            <h2 class="w3-text-green">Deluxe Room</h2>
+            <div class="w3-display-container mySlides">
+                <img src="picture/deluxe1.jpg" style="width:100%;margin-bottom:-6px"/>
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Double Bedroom</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="w3-container">
+            <h4><strong>The space</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
+                    <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 1</p>
+                    <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+                </div>
+
+            </div>
+            <hr></hr>
+
+            <h4><strong>Amenities</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+                    <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+                    <p><i class="fa fa-fw fa-tv"></i> TV</p>
+                </div>
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+                    <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+                    <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+                </div>
+            </div>
+            <hr></hr>
+        </div>
+        <h:form>
+            <div class="w3-row-padding" style="margin:0 50px;">
+                <div class="w3-half w3-margin-bottom">
+                    <h6 class="w3-opacity">Price $199</h6><br/>
+                </div>
+                <div class="w3-half">
+                    <h:commandButton value="Book Now" action="Booking.xhtml" style="width:70%;text-align:left;padding:8px 16px" />
+                </div>
+            </div>
+        </h:form>
     </h:body>
 </html>
 
