@@ -50,6 +50,8 @@ public class Login {
             while (rs.next()) {
                 if (name.equals(rs.getString("Name")) && password.equals(rs.getString("Password"))) {
                     return "reservation";
+                }else if(name.equals("") && password.equals("")){
+                    return "index";
                 }
             
         } 
