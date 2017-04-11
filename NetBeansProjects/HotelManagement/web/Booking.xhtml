@@ -15,29 +15,32 @@
     </h:head>
     <h:body class="w3-light-grey">
         <!-- Navigation Bar -->
-        <div class="w3-bar w3-white w3-large"  id="top">
-            <!--<img src="picture/logo.png" height="100" width="100" class="w3-bar-item w3-button w3-mobile"/><i class="w3-margin-right"></i>-->
-            <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Rooms</a>
-            <a href="#register" class="w3-bar-item w3-button w3-mobile">Register</a>
-            <a href="#rooms" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile" style="background-color:#05759A!important">Book Now</a>
-        </div>
+        
         <!-- Header -->
 
         <header class="w3-display-container w3-content" style="max-width:1500px;">
             <img class="w3-image" src="picture/hotel.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="800"/>
             <div class="w3-display-left w3-padding w3-col l6 m8">
-                
+
                 <h2 style="padding:0.01em 16px;background-color:#05759A!important">Your Payment Information</h2>
-                
+
                 <div class="w3-container w3-white w3-padding-16">
                     <h:form>
 
                         <div class="w3-row-padding" style="margin:8px 50px;">
                             <div class="w3-half w3-margin-bottom">
-                                <label>Room Type.:*</label>
+                                <label>Room Type:*</label>
                             </div>
                             <div class="w3-half">
-                                <h:inputText value="" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                                <h:inputText value="#{roomController.thisRooms.roomType}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                            </div>
+                        </div>
+                        <div class="w3-row-padding" style="margin:8px 50px;">
+                            <div class="w3-half w3-margin-bottom">
+                                <label>Price:*</label>
+                            </div>
+                            <div class="w3-half">
+                                <h:inputText value="#{roomController.thisRooms.price}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
                             </div>
                         </div>
                         <div class="w3-row-padding" style="margin:0 50px;">
@@ -50,7 +53,7 @@
                                     <option value="AX" >American Express</option>
                                     <option value="DC" >Diners Club</option>
                                     <option value="JC" >JCB</option>
-                                    <option value="MC" >MasterCard</option>
+                                    <option value="MC" >Master Card</option>
                                     <option value="MS" >Switch / Maestro</option>
                                     <option value="VA" >Visa</option>
                                 </select>
@@ -62,7 +65,7 @@
                                 <label>Cardholder Name:*</label><br/>
                             </div>
                             <div class="w3-half">
-                                <h:inputText value="" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                                <h:inputText  style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
                             </div>
                         </div>
                         <div class="w3-row-padding" style="margin:8px 50px;">
@@ -70,7 +73,7 @@
                                 <label>Card Number:*</label>
                             </div>
                             <div class="w3-half">
-                                <h:inputText value="" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                                <h:inputText  style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
                             </div>
                         </div>
                         <div class="w3-row-padding" style="margin:0 50px;">
@@ -116,12 +119,12 @@
                                 <label>CVV:*</label><br/>
                             </div>
                             <div class="w3-half">
-                                <h:inputText value="" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                                <h:inputText  style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
                             </div>
                         </div>
                         <div class="w3-row-padding" style="margin:8px 50px;">
                             <div class="w3-half w3-margin-bottom">
-                                <h:commandButton value="Confirm Reservation" style="width:70%;text-align:left;padding:8px 16px" />
+                                <h:commandButton  style="width:70%;text-align:left;padding:8px 16px" action="booked" value="Confirm Reservation"/>
                             </div>
                         </div>
 

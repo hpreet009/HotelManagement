@@ -25,6 +25,7 @@ public class Login {
 
     private String name;
     private String password;
+    private boolean LoggedIn ;
 
     public String getName() {
         return name;
@@ -42,6 +43,14 @@ public class Login {
         this.password = password;
     }
 
+    public boolean isLoggedIn() {
+        return LoggedIn;
+    }
+
+    public void setLoggedIn(boolean LoggedIn) {
+        this.LoggedIn = LoggedIn;
+    }
+    
     public String go() throws SQLException {
         
             Connection conn = Database.getConnection();
@@ -49,7 +58,9 @@ public class Login {
             ResultSet rs = stmt.executeQuery("SELECT * FROM registration");
             while (rs.next()) {
                 if (name.equals(rs.getString("Name")) && password.equals(rs.getString("Password"))) {
+                   // LoggedIn = true;
                     return "reservation";
+                    
                 }else if(name.equals("") && password.equals("")){
                     return "index";
                 }

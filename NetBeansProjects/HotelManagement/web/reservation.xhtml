@@ -68,8 +68,11 @@
                     <h6 class="w3-opacity">Price $99</h6><br/>
                 </div>
                 <div class="w3-half">
-                    <h:commandButton value="Book Now" action="Booking.xhtml" style="width:70%;text-align:left;padding:8px 16px" />
-                </div>
+                    <a href="#rooms" style="width:70%;text-align:left;padding:8px 16px">Book Single Room</a>
+                    <!--<h:commandButton value="Book Single Room" action="Booking.xhtml" style="width:70%;text-align:left;padding:8px 16px" />-->
+                
+
+                    </div>
             </div>
         </h:form>
         <div class="w3-container" >
@@ -116,7 +119,8 @@
                     <h6 class="w3-opacity">Price $149</h6><br/>
                 </div>
                 <div class="w3-half">
-                    <h:commandButton value="Book Now" action="Booking.xhtml" style="width:70%;text-align:left;padding:8px 16px" />
+                    <a href="#rooms" style="width:70%;text-align:left;padding:8px 16px">Book Double Room</a>
+                    <!--<h:commandButton value="Book Double Room" action="Booking.xhtml" style="width:70%;text-align:left;padding:8px 16px" />-->
                 </div>
             </div>
         </h:form>
@@ -166,7 +170,38 @@
                     <h6 class="w3-opacity">Price $199</h6><br/>
                 </div>
                 <div class="w3-half">
-                    <h:commandButton value="Book Now" action="Booking.xhtml" style="width:70%;text-align:left;padding:8px 16px" />
+                    <a href="#rooms" style="width:70%;text-align:left;padding:8px 16px">Book Double Room</a>
+                    <!--<h:commandButton value="Book Deluxe Room" action="Booking.xhtml" style="width:70%;text-align:left;padding:8px 16px" />-->
+                </div>
+                <div class="w3-opacity">
+                      <div id="rooms">  
+                          <h:panelGroup style="display: block; text-align: center">
+                              <h:dataTable value="#{roomController.rooms}" var="r" border="1"  style="background-color: tomato " >
+
+                    <h:column>
+                        <f:facet name="header">Room No</f:facet>
+                       #{r.roomNumber}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Room Type</f:facet>
+                        #{r.roomType}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Price</f:facet>
+                       #{r.price}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Status</f:facet>
+                        #{r.status}
+                    </h:column>
+                     <h:column>
+                       
+                         <h:commandButton value="Book Now" class="btn btn-info btn-lg procedd_checkout_btn" action="#{roomController.book(r)}" />
+                    </h:column>
+                   
+                </h:dataTable>
+                              </h:panelGroup>
+                      </div>
                 </div>
             </div>
         </h:form>
