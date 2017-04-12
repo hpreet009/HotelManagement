@@ -75,18 +75,19 @@ public class RoomController {
         this.thisRoom = thisRoom;
     }
 
-    public void booking() throws SQLException {
+    public String booking() throws SQLException {
 
         try {
 
             Connection conn = Database.getConnection();
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery("UPDATE rooms SET status=false WHERE roomNumber=?");
+            return "reservation";
 
         } catch (SQLException ex) {
             Logger.getLogger(RegistrationController.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        return "index";
     }
 
 }
