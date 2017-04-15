@@ -25,7 +25,7 @@ public class Login {
 
     private String name;
     private String password;
-    private boolean LoggedIn ;
+    private boolean LoggedIn = true  ;
 
     public String getName() {
         return name;
@@ -58,15 +58,20 @@ public class Login {
             ResultSet rs = stmt.executeQuery("SELECT * FROM registration");
             while (rs.next()) {
                 if (name.equals(rs.getString("Name")) && password.equals(rs.getString("Password"))) {
-                   // LoggedIn = true;
+                   LoggedIn = true;
                     return "reservation";
                     
                 }else if(name.equals("") && password.equals("")){
-                    return "index";
+                    LoggedIn = false;
+                    //return "index";
+                }
+                else if (!name.equals(rs.getString("Name")) && !password.equals(rs.getString("Password"))) {
+                   LoggedIn = false;
+                  // return "index";
                 }
             
         } 
         return null;
     }
+    }
 
-}

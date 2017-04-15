@@ -76,20 +76,20 @@ public class RegistrationController {
     
     
     
-     public String add(String name, String password, String emailAddress,int age,int contactNumber, String homeAddress, int zip, String state) {
+     public String add() {
         try {
              thisRegistration = new Registration();
             Connection conn = Database.getConnection();
             String sql = "INSERT INTO registration(Name, Password,Email,Age,ContactNumber,HomeAddress,Zip,State) VALUES (?,?,?,?,?,?,?,?)";
             PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, name);
-            pstmt.setString(2, password);
-            pstmt.setString(3, emailAddress);
-            pstmt.setInt(4, age);
-            pstmt.setInt(5, contactNumber);
-            pstmt.setString(6, homeAddress);
-            pstmt.setInt(7, zip);
-            pstmt.setString(8,state);
+            pstmt.setString(1, thisRegistration.getName());
+            pstmt.setString(2, thisRegistration.getPassword());
+            pstmt.setString(3, thisRegistration.getEmailAddress());
+            pstmt.setInt(4, thisRegistration.getAge());
+            pstmt.setInt(5, thisRegistration.getContactNumber());
+            pstmt.setString(6, thisRegistration.getHomeAddress());
+            pstmt.setInt(7, thisRegistration.getZip());
+            pstmt.setString(8,thisRegistration.getState());
             
             pstmt.executeUpdate();
             registration.add(thisRegistration);

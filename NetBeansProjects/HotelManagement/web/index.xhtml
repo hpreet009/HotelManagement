@@ -16,7 +16,7 @@
     <h:body class="w3-light-grey">
         <!-- Navigation Bar -->
         <div class="w3-bar w3-white w3-large"  id="top">
-            <!--<img src="picture/logo.png" height="100" width="100" class="w3-bar-item w3-button w3-mobile"/><i class="w3-margin-right"></i>-->
+            
             <a href="#rooms" class="w3-bar-item w3-button w3-mobile">Rooms</a>
             <a href="#register" class="w3-bar-item w3-button w3-mobile">Register</a>
             <a href="#rooms" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile" style="background-color:#05759A!important">Book Now</a>
@@ -37,7 +37,7 @@
                             </div>
                             <div class="w3-half">
                                 <h:inputText value="#{login.name}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
-                                <!--<c:if test="{}"><h:messages for="username">Wrong Username</h:messages></c:if>-->
+                                <c:if test="#{!login.loggedIn}"><h:messages for="username">Wrong Username</h:messages></c:if>
                             </div>
                         </div>
                         <div class="w3-row-padding" style="margin:8px 50px;">
@@ -47,7 +47,7 @@
                             <div class="w3-half" >
 
                                 <h:inputSecret value="#{login.password}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
-                               <!-- <c:if test="{}"><h:messages for="password">Wrong password</h:messages></c:if>-->
+                                <c:if test="#{!login.loggedIn}"><h:messages for="password">Wrong password</h:messages></c:if>
                             </div>
                         </div>
                         <div class="w3-row-padding" style="margin:8px 50px;">
@@ -108,7 +108,7 @@
         <div class="w3-container" id="contact">
             <h:form>
                 <p>Name<h:inputText value="#{registrationController.thisRegistration.name}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
-                <p>Password:<h:inputText value="#{registrationController.thisRegistration.password}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
+                <p>Password:<h:inputSecret value="#{registrationController.thisRegistration.password}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
                 <p>Email Address:<h:inputText value="#{registrationController.thisRegistration.emailAddress}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
                 <p>Age:<h:inputText value="#{registrationController.thisRegistration.age}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
                 <p>Contact Number:<h:inputText value="#{registrationController.thisRegistration.contactNumber}" style="width: 50%;padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/></p>
@@ -118,7 +118,7 @@
 
                 <div class="w3-row-padding" style="margin:8px 50px;">
                     <div class="w3-margin-bottom">
-                        <h:commandButton value="Submit" action="#{registrationController.add(registrationController.thisRegistration.name, registrationController.thisRegistration.password,registrationController.thisRegistration.emailAddress, registrationController.thisRegistration.age, registrationController.thisRegistration.contactNumber,registrationController.thisRegistration.homeAddress,registrationController.thisRegistration.zip,registrationController.thisRegistration.state)}" style="width:20%;text-align:center;padding:8px 16px;margin-top:5em" />
+                        <h:commandButton value="Submit" action="#{registrationController.add()}" style="width:20%;text-align:center;padding:8px 16px;margin-top:5em" />
                     </div>
 
                     <h:commandButton value="Reset" style="width:20%;text-align:center;padding:8px 16px" />
