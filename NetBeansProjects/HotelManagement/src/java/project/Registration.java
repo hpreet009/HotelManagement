@@ -15,7 +15,7 @@ import javax.inject.Named;
 @Named
 @ApplicationScoped
 public class Registration {
-
+    private int customer_id; 
     private String name;
     private String password;
     private String emailAddress;
@@ -24,6 +24,22 @@ public class Registration {
     private String homeAddress;
     private int zip;
     private String state;
+
+    
+      /**
+       * retirve customer id
+       * @return 
+       */
+    public int getCustomer_id() {
+        return customer_id;
+    }
+
+    public void setCustomer_id(int customer_id) {
+        this.customer_id = customer_id;
+    }
+    
+    
+    
 /**
  * Retrieve the name
  * @return  the name 

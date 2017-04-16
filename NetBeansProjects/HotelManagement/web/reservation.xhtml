@@ -17,9 +17,9 @@
     <h:body class="w3-light-grey w3-content w3-border-left w3-border-right">
             <div class="w3-bar w3-white w3-large" >
             
-                <h:form><h:commandButton value="Update Account" action="Account.xhtml" class="w3-bar-item w3-button w3-mobile" style="width:20%;text-align:center;padding:8px 16px" />
+                <h:form><h:commandButton value="Update Account" action="#{registrationController.Detail(r)}" class="w3-bar-item w3-button w3-mobile" style="width:20%;text-align:center;padding:8px 16px" />
                 
-            <h:commandButton value="Delete Account" class="w3-bar-item w3-button w3-mobile" style="width:20%;text-align:center;padding:8px 16px" /></h:form>
+                    <h:commandButton value="Delete Account" onclick="return confirm('Are you Sre You Want to Delete this Account')" action="#{registrationController.delete()}" class="w3-bar-item w3-button w3-mobile" style="width:20%;text-align:center;padding:8px 16px" /></h:form>
             
             <a href="index.xhtml" value="#{!login.loggedIn}" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile" style="background-color:#05759A!important">Log Out</a>
         </div>

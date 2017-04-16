@@ -6,6 +6,7 @@
 package project;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -77,14 +78,17 @@ public class RoomController {
 
     public String booking() throws SQLException {
 
-        try {
+        try (Connection conn = Database.getConnection()) {
 
-            Connection conn = Database.getConnection();
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("UPDATE rooms SET status=false WHERE roomNumber=?");
-            return "reservation";
-
-        } catch (SQLException ex) {
+            String sql = "UPDATE rooms SET status = 0 WHERE roomNumber=?";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.executeUpdate();
+            thisRoom = new Rooms();
+            refreshR();
+//            return "reservation";
+        }
+        
+        catch (SQLException ex) {
             Logger.getLogger(RegistrationController.class.getName()).log(Level.SEVERE, null, ex);
         }
         return "index";
