@@ -92,7 +92,7 @@ public class RecordController {
         } catch (SQLException ex) {
             Logger.getLogger(RegistrationController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return "index";
+        return "booked";
     }
 
     
