@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Hotel Management</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+        </style>
+    </h:head>
+    <h:body class="w3-light-grey w3-content w3-border-left w3-border-right">
+        <div class="w3-bar w3-white w3-large" >
+            <a href="index.xhtml" value="#{!login.loggedIn}" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile" style="background-color:#05759A!important">Log Out</a>
+        </div>
+        <div class="w3-container" >
+            <h2 class="w3-text-green">Single Bedroom</h2>
+            <div class="w3-display-container mySlides">
+                <img src="picture/single1.jpg" style="width:100%;margin-bottom:-6px"/>
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Single Bedroom</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="w3-container">
+            <h4><strong>The space</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-male"></i> Max people: 1</p>
+                    <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 1</p>
+                    <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+                </div>
+
+            </div>
+            <hr></hr>
+
+            <h4><strong>Amenities</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+                    <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+                </div>
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+                    <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+                </div>
+            </div>
+            <hr></hr>
+        </div>
+        <h:form>
+            <div class="w3-row-padding" style="margin:0 50px;">
+                <div class="w3-half w3-margin-bottom">
+                    <h6 class="w3-opacity">Price $99</h6><br/>
+                </div>
+                <div class="w3-half">
+                    <a href="#rooms" style="width:70%;text-align:left;padding:8px 16px">Book Single Room</a>
+
+
+                </div>
+            </div>
+        </h:form>
+        <div class="w3-container" >
+            <h2 class="w3-text-green">Double Bedroom</h2>
+            <div class="w3-display-container mySlides">
+                <img src="picture/double1.jpg" style="width:100%;margin-bottom:-6px"/>
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Double Bedroom</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="w3-container">
+            <h4><strong>The space</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-male"></i> Max people: 2</p>
+                    <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 1</p>
+                    <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+                </div>
+
+            </div>
+            <hr></hr>
+
+            <h4><strong>Amenities</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+                    <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+                    <p><i class="fa fa-fw fa-tv"></i> TV</p>
+                </div>
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+                    <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+                </div>
+            </div>
+            <hr></hr>
+        </div>
+        <h:form>
+            <div class="w3-row-padding" style="margin:0 50px;">
+                <div class="w3-half w3-margin-bottom">
+                    <h6 class="w3-opacity">Price $149</h6><br/>
+                </div>
+                <div class="w3-half">
+                    <a href="#rooms" style="width:70%;text-align:left;padding:8px 16px">Book Double Room</a>
+
+                </div>
+            </div>
+        </h:form>
+
+        <div class="w3-container" >
+            <h2 class="w3-text-green">Deluxe Room</h2>
+            <div class="w3-display-container mySlides">
+                <img src="picture/deluxe1.jpg" style="width:100%;margin-bottom:-6px"/>
+                <div class="w3-display-bottomleft w3-container w3-black">
+                    <p>Double Bedroom</p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="w3-container">
+            <h4><strong>The space</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
+                    <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 1</p>
+                    <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+                </div>
+
+            </div>
+            <hr></hr>
+
+            <h4><strong>Amenities</strong></h4>
+            <div class="w3-row w3-large">
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+                    <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+                    <p><i class="fa fa-fw fa-tv"></i> TV</p>
+                </div>
+                <div class="w3-col s6">
+                    <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+                    <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+                    <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+                </div>
+            </div>
+            <hr></hr>
+        </div>
+        <h:form>
+            <div class="w3-row-padding" style="margin:0 50px;">
+                <div class="w3-half w3-margin-bottom">
+                    <h6 class="w3-opacity">Price $199</h6><br/>
+                </div>
+                <div class="w3-half">
+                    <a href="#rooms" style="width:70%;text-align:left;padding:8px 16px">Book Double Room</a>
+                </div>
+                </div>
+               
+                    <div id="rooms">  
+                        <h:panelGroup style="display: block; text-align: center">
+                            <h:dataTable value="#{roomController.rooms}" var="r"  border="1" style=" background-color: thistle;margin-left: 300px ">
+
+                                <h:column>
+                                    <f:facet name="header">Room No</f:facet>
+                                        #{r.roomNumber}
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Room Type</f:facet>
+                                        #{r.roomType}
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Price</f:facet>
+                                        #{r.price}
+                                </h:column>
+                                <h:column>
+                                    <f:facet name="header">Status</f:facet>
+                                        #{r.status}
+                                </h:column>
+                                <h:column>
+
+                                    <h:commandButton value="Book Now" class="btn btn-info btn-lg procedd_checkout_btn" action="#{roomController.book(r)}" />
+                                </h:column>
+
+                            </h:dataTable>
+                        </h:panelGroup>
+                    </div>
+
+        </h:form>
+    </h:body>
+</html>
+

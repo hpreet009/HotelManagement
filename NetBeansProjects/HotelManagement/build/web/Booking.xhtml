@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h:head>
+        <title>Hotel Management</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+        </style>
+    </h:head>
+    <h:body class="w3-light-grey">
+        <!-- Navigation Bar -->
+
+        <!-- Header -->
+
+        <header class="w3-display-container w3-content" style="max-width:1500px;">
+            <img class="w3-image" src="picture/hotel.jpg" alt="The Hotel" style="min-width:1000px" width="1500" height="800"/>
+            <div class="w3-display-left w3-padding w3-col l6 m8">
+
+                <h2 style="padding:0.01em 16px;background-color:#05759A!important">Your Payment Information</h2>
+
+                <div class="w3-container w3-white w3-padding-16">
+                    <h:form>
+
+                        <div class="w3-row-padding" style="margin:8px 50px;">
+                            <div class="w3-half w3-margin-bottom">
+                                <label>Room Type:*</label>
+                            </div>
+                            <div class="w3-half">
+                                <h:inputText value="#{roomController.thisRooms.roomType}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                            </div>
+                        </div>
+                        <div class="w3-row-padding" style="margin:8px 50px;">
+                            <div class="w3-half w3-margin-bottom">
+                                <label>Price:*</label>
+                            </div>
+                            <div class="w3-half">
+                                <h:inputText value="#{roomController.thisRooms.price}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                            </div>
+                        </div>
+                        <div class="w3-row-padding" style="margin:0 50px;">
+                            <div class="w3-half w3-margin-bottom">
+                                <label>Card Type:*</label><br/>
+                            </div>
+                            <div class="w3-half">
+                                <h:selectOneMenu value="#{recordController.thisRecord.cardType}">
+                                    <f:selectItem itemValue="American Exprees" ></f:selectItem>
+                                    <f:selectItem itemValue=" Diners Club"></f:selectItem>
+                                    <f:selectItem itemValue="rewrgr" ></f:selectItem>
+                                    <f:selectItem itemValue="Master Card"></f:selectItem>
+                                    <f:selectItem itemValue="Switch  Maestro"></f:selectItem>
+                                    <f:selectItem itemValue="Visa"></f:selectItem>
+                                </h:selectOneMenu>
+
+                            </div>
+                        </div>
+                        <div class="w3-row-padding" style="margin:0 50px;">
+                            <div class="w3-half w3-margin-bottom">
+                                <label>Cardholder Name:*</label><br/>
+                            </div>
+                            <div class="w3-half">
+                                <h:inputText value="#{recordController.thisRecord.cardHolder}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                            </div>
+                        </div>
+                        <div class="w3-row-padding" style="margin:8px 50px;">
+                            <div class="w3-half w3-margin-bottom">
+                                <label>Card Number:*</label>
+                            </div>
+                            <div class="w3-half">
+                                <h:inputText value="#{recordController.thisRecord.cardNumber}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                            </div>
+                        </div>
+                        <div class="w3-row-padding" style="margin:0 50px;">
+                            <div class="w3-half w3-margin-bottom">
+                                <label>Expiry Date:*</label><br/>
+                            </div>
+                            <div class="w3-half">
+
+                                <select>
+                                    <option value="" >Month</option>
+                                    <option value="01" >January</option>
+                                    <option value="02" >February</option>
+                                    <option value="03" >March</option>
+                                    <option value="04" >April</option>
+                                    <option value="05" >May</option>
+                                    <option value="06" >June</option>
+                                    <option value="07" >July</option>
+                                    <option value="08" >August</option>
+                                    <option value="09" >September</option>
+                                    <option value="10" >October</option>
+                                    <option value="11" >November</option>
+                                    <option value="12" >December</option>
+                                </select>
+                                <select>
+                                    <option value="" >Year</option>
+                                    <option value="2017" >2017</option>
+                                    <option value="2018" >2018</option>
+                                    <option value="2019" >2019</option>
+                                    <option value="2020" >2020</option>
+                                    <option value="2021" >2021</option>
+                                    <option value="2022" >2022</option>
+                                    <option value="2023" >2023</option>
+                                    <option value="2024" >2024</option>
+                                    <option value="2025" >2025</option>
+                                    <option value="2026" >2026</option>
+                                </select>
+
+
+                            </div>
+                        </div>
+                        <div class="w3-row-padding" style="margin:0 50px;">
+                            <div class="w3-half w3-margin-bottom">
+                                <label>CVV:*</label><br/>
+                            </div>
+                            <div class="w3-half">
+                                <h:inputText  style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                            </div>
+                        </div>
+                        <div class="w3-row-padding" style="margin:8px 50px;">
+                            <div class="w3-half w3-margin-bottom">
+                                <h:commandButton  style="width:70%;text-align:left;padding:8px 16px" action="#{recordController.add(roomController.thisRooms.roomType,roomController.thisRooms.price,recordController.thisRecord.cardType,recordController.thisRecord.cardHolder,recordController.thisRecord.cardNumber)}" value="Confirm Reservation"/>
+                            </div>
+                        </div>
+
+                    </h:form>
+                </div>
+            </div>
+        </header>
+    </h:body>
+</html>
+
