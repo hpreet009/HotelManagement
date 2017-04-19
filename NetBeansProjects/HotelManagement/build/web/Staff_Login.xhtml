@@ -33,7 +33,7 @@
                                 <label>Staff Member</label><br/>
                             </div>
                             <div class="w3-half">
-                                <h:inputText value="#{login.name}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                                <h:inputText value="#{staffLogin.username}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
                                 <c:if test="#{!login.loggedIn}"><h:messages for="username">Wrong Username</h:messages></c:if>
                             </div>
                         </div>
@@ -43,13 +43,13 @@
                             </div>
                             <div class="w3-half" >
 
-                                <h:inputSecret value="#{login.password}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
+                                <h:inputSecret value="#{staffLogin.password}" style="padding:8px;display:block;border:1;border-bottom:1px solid #ccc"/>
                                 <c:if test="#{!login.loggedIn}"><h:messages for="password">Wrong password</h:messages></c:if>
                             </div>
                         </div>
                         <div class="w3-row-padding" style="margin:8px 50px;">
                             <div class="w3-half w3-margin-bottom">
-                                <h:commandButton value="Click Me" action="#{login.go()}" style="width:40%;text-align:left;padding:8px 16px" />
+                                <h:commandButton value="Click Me" action="#{staffLogin.click()}" style="width:40%;text-align:left;padding:8px 16px" />
                             </div>
                         </div>
 

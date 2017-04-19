@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Hotel Management</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <style>
+            body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+        </style>
+    </h:head>
+    <h:body class="w3-light-grey"  style="background-image:url(picture/staff.jpg)">
+        <!-- Navigation Bar -->
+        <div class="w3-bar w3-white w3-large"  id="top">
+            <a href="index.xhtml" class="w3-bar-item w3-button w3-right w3-light-grey w3-mobile" style="background-color:#A3EDFF!important">Log Out</a>
+        </div>
+
+        <h:panelGroup style="display: block; text-align: center">
+            <h:form>
+                <label>Room Number:</label>
+                <h:inputText value="#{roomController.thisRooms.roomNumber}"/>
+                <label>Room Type:</label>
+                <h:inputText value="#{roomController.thisRooms.roomType}"/>
+                
+                <label>Price:</label>
+                <h:inputText value="#{roomController.thisRooms.price}"/>
+                <h:commandButton  class="btn btn-danger"  value="Add Room" action="#{roomController.add(n, t, p)}" />
+                </h:form>
+            </h:panelGroup>
+                    </h:body>
+                    </html>
